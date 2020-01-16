@@ -105,6 +105,17 @@
 }
 
 % Coloca uma figura menor (sem ser quadrinhos) apertada verticalmente
+\newcommand{\figurapequenainlineflexivel}[2] {
+  \begin{wrapfigure}{r}{0.25\textwidth}
+    \vspace{-#2}
+    \begin{center}
+      \includegraphics[width=0.25\textwidth]{img/#1.pdf}
+    \end{center}
+    \vspace{-#2}
+  \end{wrapfigure}
+}
+
+% Coloca uma figura menor (sem ser quadrinhos) apertada verticalmente
 \newcommand{\figurapequenainlineapertada}[1] {
   \begin{wrapfigure}{r}{0.25\textwidth}
     \vspace{-40pt}
@@ -146,7 +157,7 @@
 \begin{figure}[p]
   %\begin{center}
     %\hspace{1.7cm}
-    \includegraphics[height=1.05\textheight]{img/capa_2018.pdf} %REFTIME
+    \includegraphics[height=1.05\textheight]{img/capa_2019.pdf} %REFTIME
   %\end{center}
 \end{figure}
 \thispagestyle{empty} % Some com aquele número 1 feio na capa.
@@ -208,16 +219,10 @@
 % Um Pouco Sobre o IME ---------------------------------------------------------
 \input{sobre_o_ime.tex}
 
-%FIXME GAMBIARRA para não quebrar página num lugar zuado
-\pagebreak
-
 \quadrinhos{7}
 
 % Atitude, bixo! ---------------------------------------------------------------
 \input{atitude_bixo.tex}
-
-%FIXME GAMBIARRA para não quebrar página num lugar zuado
-\pagebreak
 
 % CCSL - Centro de Competência em Software Livre
 \input{ccsl.tex}
@@ -281,10 +286,6 @@
 % página tem que estar vazia
 
 \newpage
-\thispagestyle{empty}
-\pagebreak
-
-\newpage\phantom{skip}
 \thispagestyle{empty}
 \pagebreak
 
